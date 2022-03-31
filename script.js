@@ -1,11 +1,6 @@
-let lightTheme = "terang.css";
-let darkTheme = "gerap.css";
-
 document.addEventListener("keydown", keyboardInputHandler);
 
-
 function keyboardInputHandler(e) {
-  
   let res = document.getElementById("result");
 
   if (e.key === "0") {
@@ -32,36 +27,30 @@ function keyboardInputHandler(e) {
     res.value += "9";
   }
 
-  
   if (e.key === "+") {
     res.value += "+";
   } else if (e.key === "-") {
     res.value += "-";
-  } else if (e.key === "x") {
-    res.value += "x";
-  } else if (e.key === ":") {
-    res.value += ":";
+  } else if (e.key === "*") {
+    res.value += "*";
+  } else if (e.key === "/") {
+    res.value += "/";
   }
 
-  
   if (e.key === ".") {
     res.value += ".";
   }
 
-  
   if (e.key === "Enter") {
     res.value = eval(result.value || null);
   }
 
-  
   if (e.key === "Backspace") {
     let resultInput = res.value;
 
-    
     res.value = resultInput.substring(0, res.value.length - 1);
   }
 }
-
 
 function clearScreen() {
   document.getElementById("result").value = "";
@@ -76,13 +65,14 @@ function liveScreen(value) {
 }
 
 function changeTheme() {
-  let darkMode = document.getElementById("dark-mode");
-  let theme = document.getElementById("theme");
-  if (theme.getAttribute("href") === lightTheme) {
-    theme.href = darkTheme;
-    darkMode.innerHTML = "Light Mode";
+  const css = document.getElementById("theme");
+  const btn = document.getElementById("dark-mode");
+
+  if (btn.innerHTML == "Light Mode") {
+    css.setAttribute("href", "terang.css");
+    btn.innerHTML = "Dark Mode";
   } else {
-    theme.href = lightTheme;
-    darkMode.innerHTML = "Dark Mode";
+    css.setAttribute("href", "gelap.css");
+    btn.innerHTML = "Light Mode";
   }
 }
