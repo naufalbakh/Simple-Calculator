@@ -37,10 +37,10 @@ function keyboardInputHandler(e) {
     res.value += "+";
   } else if (e.key === "-") {
     res.value += "-";
-  } else if (e.key === "*") {
-    res.value += "*";
-  } else if (e.key === "/") {
-    res.value += "/";
+  } else if (e.key === "x") {
+    res.value += "x";
+  } else if (e.key === ":") {
+    res.value += ":";
   }
 
   
