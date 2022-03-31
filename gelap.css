@@ -62,6 +62,11 @@ input[type="button"]:hover {
   color: #fff;
   background-color: rgb(255, 42, 42);
 }
+
+.operator{
+  background-color: rgb(255, 156, 42);
+}
+
 button {
   border: none;
   background-color: rgb(39, 36, 36);
@@ -91,4 +96,68 @@ a {
 .bottom-buttons {
   display: flex;
   margin-left: -2.3px;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 80%;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapper {
+    width: 80%;
+    padding: 0.2rem;
+  }
+
+  .container h1 {
+    width: 80%;
+    padding: 0.2rem;
+    
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 70%;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapper {
+    width: 70%;
+    padding: 0.2rem;
+  }
+
+  .container h1 {
+    width: 70%;
+    padding: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 50%;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapper {
+    width: 50%;
+    padding: 0.2rem;
+  }
+
+  .container h1 {
+    width: 50%;
+    padding: 0.2rem;
+  }
 }
